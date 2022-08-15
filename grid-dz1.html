@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper > div {
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+      }
+      .wrapper {
+        height: 100vh;
+        display: grid;
+        grid-gap: 0.8rem;
+        grid-template-areas:
+          "one one"
+          "two three"
+          "four four";
+        grid-template-columns: minmax(150px 150px auto);
+        grid-template-rows: 300px auto 300px;
+        color: aliceblue;
+      }
+
+      .one {
+        background: #46b1d7;
+        grid-area: one;
+      }
+
+      .two {
+        grid-area: two;
+        background: #9ea3e4;
+      }
+
+      .three {
+        grid-area: three;
+        background: #d45fd2;
+      }
+
+      .four {
+        grid-area: four;
+        background: #e259c3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="one">1</div>
+      <div class="two">2</div>
+      <div class="three">3</div>
+      <div class="four">4</div>
+    </div>
+  </body>
+</html>

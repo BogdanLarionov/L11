@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+
+<style>
+
+          .cards {
+                    display: flex;
+                    width: 150vw;
+          }
+          .cards>div {
+                    width: 30vw;
+                    background:gold;
+                    height: 28rem;
+                    border: 2px solid #000;
+          }
+
+          .wrapper{
+                    overflow-x: scroll;
+                    padding-bottom: 1rem;
+          }
+
+          .wrapper::-webkit-scrollbar{
+                    height: 15px;
+          }
+
+          .wrapper::-webkit-scrollbar-track{
+                    background:lightgray;
+                    border-radius: 8px;
+          }
+          .wrapper::-webkit-scrollbar-thumb{
+                    background:blue;
+                    border-radius: 8px;
+          }
+          .noselect{
+                    user-select: none;
+
+
+                    /* -webkit-user-select: none;  - для сафарри*/
+          }
+
+          .title{
+                    font-size: 5vw;
+          }
+</style>
+<body>
+          <div class="wrapper">
+                    <div class="cards">
+                              <div>1</div>
+                              <div>2</div>
+                              <div>3</div>
+                              <div>4</div>
+                              <div>5</div>
+                    </div>
+          </div>
+
+          <button>Button 1</button>
+          <p class="noselect">button 2</p>
+
+                    <h1 class="title">Hello, User ! welcom to..</h1>
+                    <div>
+                              <input type="date">
+                    </div>
+                    <div>
+                              <input type="range">
+                    </div>
+</body>
+</html>

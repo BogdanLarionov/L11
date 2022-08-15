@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .wrapper > div {
+      font-size: 2rem;
+      background: gold;
+      text-align: center;
+    }
+
+    .wrapper {
+      height: 100vh;
+      display: grid;
+      grid-gap: .5rem;
+      grid-template-areas:
+        "nav header header"
+        "nav banner main"
+        "footer footer footer";
+      grid-template-columns: minmax(200px 200px auto);
+      /* grid-template-columns: minmax(150px, auto); */
+      /*  grid-template-columns: auto-fill; */
+      grid-template-rows: 100px auto 100px;
+    }
+
+    .header {
+      grid-area: header;
+      
+    }
+
+    .nav {
+      grid-area: nav;
+    }
+
+    .main {
+      grid-area: main;
+    }
+
+    .banner {
+      grid-area: banner;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+    /* @media print{
+          медеа запрос для принтера
+          .wrapper{
+                    display:block;
+          }
+          .nav,
+          .header,
+          .banner,
+          .footer {
+                    display: none;
+          }
+        } */
+
+    /* @media print {
+      .wrapper {
+        grid-template-areas: 'main';
+      }
+    } */
+
+    @media screen and (max-width: 768px) and /* (orientation: portrait) { */ (orientation: landscape) {
+      .nav {
+        display: none;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="wrapper">
+      <div class="header">header</div>
+      <div class="nav">nav</div>
+      <div class="main">main</div>
+      <div class="banner">banner</div>
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>

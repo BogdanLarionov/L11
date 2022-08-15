@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper > div {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wrapper {
+        height: 100vh;
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-rows: 100px 100px 100px 100px 100px;
+        grid-template-columns: 100px 150px 100px 100px  100px;
+        grid-template-areas:
+         "a  b  d"
+          "e f"
+         ;
+      }
+
+      .a {
+        grid-area: a;
+        background: #61da89;
+      }
+
+      .b {
+        grid-area: b;
+        background: #d38823;
+      }
+
+      .c {
+        grid-area: c;
+        background: #8ada10;
+      }
+
+      .d {
+        grid-area: d;
+        background: #8a2dd9;
+      }
+
+      .e {
+        grid-area: e;
+        background: #d82d8b;
+      }
+
+      .f {
+        grid-area: f;
+        background: #2e84d9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="d">D</div>
+      <div class="e">E</div>
+      <div class="f">F</div>
+    </div>
+  </body>
+</html>

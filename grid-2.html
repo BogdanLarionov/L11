@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .wrapper > div {
+      font-size: 2rem;
+      background: gold;
+      text-align: center;
+    }
+
+    .wrapper {
+      height: 100vh;
+      display: grid;
+      grid-gap: .5rem;
+      grid-template-areas:
+          'header header header'
+          /*  'header header banner'*/
+          /*  '.пустата. header banner'*/
+          
+          'nav main banner'
+          /* 'nav footer footer'; */
+          'footer footer footer';
+          grid-template-columns: 200px 200px;
+          grid-template-rows:100px auto 100px;
+          /* grid-template-columns: 200px auto 200px; */
+          /*grid-template-columns: 30vw 1fr 200px; */
+          /* grid-template-columns: 25% 50% 25%; */
+    }
+
+    .header {
+      grid-area: header;
+    }
+
+    .nav {
+      grid-area:nav;
+    }
+
+    .main{
+          grid-area: main;
+    }
+
+    .banner{
+          grid-area:banner;
+    }
+
+    .footer{
+          grid-area:footer;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <div class="header">header</div>
+      <div class="nav">nav</div>
+      <div class="main">main</div>
+      <div class="banner">banner</div>
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>

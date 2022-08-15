@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .wrapper > div {
+      font-size: 2rem;
+      background: gold;
+      text-align: center;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-gap: 1rem;
+      /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                     grid-template-columns: repeat(4, 1fr);
+                     /* количество повторам, значение */
+
+      grid-template-columns: repeat(5, 1fr);
+
+      grid-template-rows: repead(3, 1fr);
+      /* grid-template-rows:1fr 1fr 1fr; */
+
+      height: 100vh;
+      /* количество столбцов - grid-template-columns: 33% 33% 33%;
+                    grid-template-columns: 150px 150px 300px 150px;
+                    grid-template-columns: 1fr 1fr 2fr 1fr .5fr; */
+    }
+
+    .wrapper > div:nth-child(1) {
+      /* grid-column-start: 1;
+      grid-column-end: span 3; */
+      /* (grid-column: 1 / span 3;) */
+
+      /* grid-row-start: 2;
+      grid-row-end: span 3; */
+      /* ( grid-row:2 /span 3 ;) */
+
+      grid-area: 1 / 1 / span 3 / span 3;
+      /* grid-area: 1 / 1 / 4 / 4; */
+      /* строка - столбец,строка - столбец */
+    }
+
+    .wrapper > div:nth-last-child() {
+      grid-column: 1 / span 3;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+  </body>
+</html>

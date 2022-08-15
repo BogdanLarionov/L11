@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+          margin: 0;
+          height:300vh;
+      }
+
+      .menu {
+          box-sizing: border-box;
+        position: absolute;
+        background: #ccc;
+        height: 100vh;
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2rem;
+        font-size:1.25rem;
+        transition:all .3s ease-out;
+        /* transform: translateX(-20rem); */
+
+
+        /* transform: translateY(-100vh); */
+        transform: translateY(-100vh) translateX(-20rem);
+      }
+
+      .menu.menu--active{
+          /* transform: translateX(0); */
+          /* transform: translateY(0); */
+
+          transform: translateY(0) translateX(0);
+          
+
+      }
+
+
+          
+
+    </style>
+  </head>
+  <body>
+
+          <!-- <div class="menu menu--active"></div> -->
+
+    <div class="menu">
+      <div>About</div>
+      <div>Catalog</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+    </div>
+  </body>
+</html>
